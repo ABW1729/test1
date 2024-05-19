@@ -1,7 +1,7 @@
 import {  NextApiRequest, NextApiResponse } from "next";
 import { readCSV } from "../../../lib/readCSV"
 
-export async function GET(req:NextApiRequest) {
+export async function GET(req:Request) {
     try {
         const data = await readCSV('salaries.csv'); 
         const stats = {};
